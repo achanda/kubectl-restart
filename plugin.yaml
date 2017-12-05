@@ -4,3 +4,9 @@ longDesc: >
   Restarts a pod with the given name. The existing pod will be deleted and created again, not a true restart.
 example: "kubectl plugin restart <pod_name>"
 command: ./restart.sh
+flags: 
+  - name : "namespace"
+    shorthand: "n"
+    desc: "Namespace of the pod"
+    defValue: "default"
+

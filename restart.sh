@@ -5,5 +5,5 @@ then
         echo "Pod name cannot be empty"
         exit 2
 else
-        kubectl get po "$1" -o yaml | kubectl replace --force -f -
+        kubectl get po "$1" -n "$KUBECTL_PLUGINS_LOCAL_FLAG_NAMESPACE" -o yaml | kubectl replace --force -f -
 fi
